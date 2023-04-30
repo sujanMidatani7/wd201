@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <style>
+     
+        <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .form {
+      width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="date"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    form input[type="checkbox"] {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    form button[type="submit"] {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .success-message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #d4edda;
+      border-radius: 5px;
+      color: #155724;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      margin: 0px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    thead {
+      background-color: #007bff;
+      color: white;
+    }
+
+    th {
+      padding: 12px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+  </style>
+  </head>
+  <body>
+    <h1 align="center">WELCOME TO MY REGISTRATION PAGE</h1>
+    <div class="form">
+      <h1 align="center">Registration Page</h1>
+      <form id="login-form">
+        <label for="name">Name</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="password">Password</label><br />
+        <input type="password" id="password" name="password" required /><br />
+
+        <label for="dob">Date of Birth</label><br />
+        <input type="date" id="dob" name="dob" required max="" min="" /><br />
+
+        <label for="acceptTerms">Accept Terms &amp; Conditions</label>
+        <input type="checkbox" id="acceptTerms" name="acceptTerms" required />
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="errorPrompt" style="display: none">
+        Please fill all required fields.
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <h1
+          align="center"
+          style="
+            background-color: #4caf50;
+            color: white;
+            width: 100;
+            border: 3px solid black;
+          "
+        >
+          Entries
+        </h1>
+      </thead>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Dob</th>
+          <th>Password</th>
+          <th>Accepted terms</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="index.js"></script>
+  </body>
+</html>
